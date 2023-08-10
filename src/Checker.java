@@ -22,7 +22,6 @@ public class Checker {
                 if (getMonthNumber(monthName) == yearInfo.month) {
                 if (!yearInfo.isExpense) {
                     profit = yearInfo.amount;
-                    monthNumber = yearInfo.month;
                 } else if (yearInfo.isExpense) {
                     waste = yearInfo.amount;
                     if (profit == monthlyReport.getProfit(monthName) || monthlyReport.getWaste(monthName) == waste) {
