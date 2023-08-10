@@ -9,7 +9,7 @@ public class Main {
         MonthlyReport monthlyReport = new MonthlyReport();
         YearReport yearReport = new YearReport();
         Checker checker = new Checker(monthlyReport, yearReport);
-//TRUE-трата FALSE-доход
+ //TRUE-трата FALSE-доход
 
 
 

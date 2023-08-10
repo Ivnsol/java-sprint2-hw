@@ -29,7 +29,7 @@ public class MonthlyReport {
         System.out.println(monthName);
         ArrayList<MonthInfo> getTopProduct = monthInclude.get(monthName);
         int topProduct = 0;
-        int maxProductIndex = -1; // Индекс элемента с максимальным значением
+        int maxProductIndex = -1;  // Индекс элемента с максимальным значением
         if (getTopProduct!=null && !getTopProduct.isEmpty()) {
             for (int i = 0; i < getTopProduct.size(); i++) {
                 MonthInfo monthInfo = getTopProduct.get(i);

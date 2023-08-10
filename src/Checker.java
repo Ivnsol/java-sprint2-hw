@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Checker {
@@ -56,4 +55,4 @@ public class Checker {
 
 
 
-/*Сверить отчёты — по сохранённым данным проверить, сходятся ли отчёты за месяцы и за год.*/
+ /*Сверить отчёты — по сохранённым данным проверить, сходятся ли отчёты за месяцы и за год.*/
