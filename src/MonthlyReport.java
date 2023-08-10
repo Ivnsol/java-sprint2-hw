@@ -78,7 +78,7 @@ public class MonthlyReport {
         }
     }
 
-    public String getProfit(String monthName) { // метод для подсчета выручки
+    public int getProfit(String monthName) { // метод для подсчета выручки
         ArrayList<MonthInfo> getProfit = monthInclude.get(monthName);
         int profit = 0;
             for (int i = 0; i < getProfit.size(); i++) {
@@ -87,20 +87,21 @@ public class MonthlyReport {
                     profit += monthInfo.unitPrice * monthInfo.quantity;
                 }
             }
-        return monthName;
+        return profit;
     }
 
-    public void getWaste(String monthName) { // метод для подсчета трат
+    public int getWaste(String monthName) { // метод для подсчета трат
         ArrayList<MonthInfo> getWaste = monthInclude.get(monthName);
-        int Waste = 0;
+        int waste = 0;
         for (int i = 0; i < getWaste.size(); i++) {
             MonthInfo monthInfo = getWaste.get(i);
             if (monthInfo.isExpense) {
-                Waste += monthInfo.unitPrice * monthInfo.quantity;
+                waste += monthInfo.unitPrice * monthInfo.quantity;
             }
         }
+        return waste;
     }
-    }
+}
 
 
 

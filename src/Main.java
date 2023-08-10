@@ -8,7 +8,7 @@ public class Main {
 
         MonthlyReport monthlyReport = new MonthlyReport();
         YearReport yearReport = new YearReport();
-        Checker checker = new Checker();
+        Checker checker = new Checker(monthlyReport, yearReport);
 //TRUE-трата FALSE-доход
 
 
@@ -33,9 +33,14 @@ public class Main {
 
             } else if (command == 3) {
 
-                checker.check("2021", "January");
+               if (checker.check("2021", "January") &&
+                checker.check("2021", "February")&&
+                checker.check("2021", "March")){
+                   System.out.println("Операция завершена успешно");
+               }
 
             } else if (command == 4) {
+
                 monthlyReport.getTopProduct("January");
                 monthlyReport.getLessProduct("January");
 
@@ -44,6 +49,7 @@ public class Main {
 
                 monthlyReport.getTopProduct("March");
                 monthlyReport.getLessProduct("March");
+
             } else if (command == 5) {
 
                 yearReport.profitPerMonth("2021");
