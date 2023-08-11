@@ -19,12 +19,10 @@ public class Checker {
             for (int i = 1; i < month.size(); i++) {
                 YearInfo yearInfo = year.get(i);
                 if (getMonthNumber(monthName) == yearInfo.month) {
-                if (!yearInfo.isExpense) {
+                if (!yearInfo.isExpense || yearInfo.isExpense) { //Проглядел дальнейшее условие *_*
                     profit = yearInfo.amount;
-                } else if (yearInfo.isExpense) {
                     waste = yearInfo.amount;
                     if (profit == monthlyReport.getProfit(monthName) || monthlyReport.getWaste(monthName) == waste) {
-                        // Действия, если условие выполняется
                     } else {
                         System.out.println("Ошибка в отчетах за " + yearInfo.month + " месяц.");
                     }
@@ -49,10 +47,3 @@ public class Checker {
         return -1;
     }
 }
-
-
-
-
-
-
- /*Сверить отчёты — по сохранённым данным проверить, сходятся ли отчёты за месяцы и за год.*/

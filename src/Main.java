@@ -19,6 +19,7 @@ public class Main {
             printMenu();
             int command = scanner.nextInt();
             if (command == 1) {
+
                 monthlyReport.addMonth("January", "m.202101.csv");
 
                 monthlyReport.addMonth("February", "m.202102.csv");
@@ -29,7 +30,7 @@ public class Main {
 
             } else if (command == 2) {
 
-                yearReport.addYear("2021", "y.2021.csv");
+                yearReport.addYear("2021","y.2021.csv");
 
             } else if (command == 3) {
 
